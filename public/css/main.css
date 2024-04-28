@@ -29,6 +29,41 @@
   1. Global
 -------------------------------------------------------------------------------*/
 /* 1.1 General */
+.whatsapp-container {
+  position: fixed;
+  height: 100px;
+  width: 200px;
+  
+  display: flex;
+  flex-direction: row; /* Added */
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+.whatsapp-contact {
+  margin: 0;
+  padding: 10px;
+  color: #333; /* Metin rengini belirler */
+  font-size: 14px; /* Metin boyutunu belirler */
+  font-family: Arial, sans-serif; /* Font ailesini belirler */
+  text-align: center; /* Metni ortalar */
+
+}
+.whatsapp-icon {
+  right: 5vw;
+  bottom: 14vh;
+  position: fixed;
+  width: 50px; /* İkonun boyutunu ayarlayabilirsiniz */
+  height: 50px; /* İkonun boyutunu ayarlayabilirsiniz */
+  background-image: url('../img/wp.png'); /* Kullanmak istediğiniz ikonun yolunu belirtin */
+  background-size: cover;
+  cursor: pointer;
+}
 .container {
   max-width: calc(100% - 200px);
   margin: auto;

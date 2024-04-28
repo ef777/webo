@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+</head>
+<body>
+    <% if (1==1
+      ) { %>
+        <h1>Hoş geldiniz, <%= username %></h1>
+        <form action="/add-reference" method="POST">
+            <label for="title">Başlık:</label>
+            <input type="text" id="title" name="title" required><br>
+            <label for="description">Açıklama:</label>
+            <textarea id="description" name="description" required></textarea><br>
+            <label for="image">Resim:</label>
+            <input type="text" id="image" name="image" required><br>
+            <label for="link">Link:</label>
+            <input type="text" id="link" name="link" required><br>
+            <button type="submit">Referans Ekle</button>
+        </form>
+        <form action="/logout" method="POST">
+            <button type="submit">Çıkış Yap</button>
+        </form>
+    <% } else { %>
+        <h1>Giriş Yapın</h1>
+        <form action="/login" method="POST">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    <% } %>
+</body>
+</html>
